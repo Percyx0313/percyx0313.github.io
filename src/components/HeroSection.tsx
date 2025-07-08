@@ -1,5 +1,5 @@
 import { personalInfo } from "@/lib/data";
-import { Mail, Github, MapPin, Linkedin } from "lucide-react";
+import { Mail, Github, MapPin, Linkedin, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import MotionWrapper from "./MotionWrapper";
 
@@ -48,7 +48,7 @@ export default function HeroSection() {
               className="text-xl text-muted-foreground mb-6"
               variants={childVariants}
             >
-              Software Engineer 👨‍💻
+              Computer Vision & AI Researcher 👨‍💻
             </motion.p>
 
             <motion.div
@@ -74,29 +74,45 @@ export default function HeroSection() {
                 ✉️ {personalInfo.email}
               </motion.a>
 
-              <motion.a
-                href={personalInfo.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
-                variants={childVariants}
-                whileHover={{ scale: 1.05, color: "#4b5563" }}
-              >
-                <Github className="h-4 w-4 mr-2" />
-                🌟 GitHub
-              </motion.a>
+              {personalInfo.phone && (
+                <motion.a
+                  href={`tel:${personalInfo.phone}`}
+                  className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  variants={childVariants}
+                  whileHover={{ scale: 1.05, color: "#4b5563" }}
+                >
+                  <Phone className="h-4 w-4 mr-2" />
+                  📞 {personalInfo.phone}
+                </motion.a>
+              )}
 
-              <motion.a
-                href={personalInfo.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
-                variants={childVariants}
-                whileHover={{ scale: 1.05, color: "#4b5563" }}
-              >
-                <Linkedin className="h-4 w-4 mr-2" />
-                🔗 LinkedIn
-              </motion.a>
+              {personalInfo.github && (
+                <motion.a
+                  href={personalInfo.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  variants={childVariants}
+                  whileHover={{ scale: 1.05, color: "#4b5563" }}
+                >
+                  <Github className="h-4 w-4 mr-2" />
+                  🌟 GitHub
+                </motion.a>
+              )}
+
+              {personalInfo.linkedin && (
+                <motion.a
+                  href={personalInfo.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  variants={childVariants}
+                  whileHover={{ scale: 1.05, color: "#4b5563" }}
+                >
+                  <Linkedin className="h-4 w-4 mr-2" />
+                  🔗 LinkedIn
+                </motion.a>
+              )}
             </motion.div>
           </div>
 
@@ -122,15 +138,12 @@ export default function HeroSection() {
           <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm backdrop-filter p-4 rounded-lg border border-purple-500/20 dark:border-purple-500/10 shadow-sm">
             <p className="text-muted-foreground pl-4 py-2 mb-4 relative">
               <span className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-purple-500 to-pink-500 rounded-full"></span>
-              🚀 Passionate software engineer with a versatile skill set
-              spanning multiple domains. I thrive on solving complex challenges
-              across different platforms and environments, adapting quickly to
-              new technologies and methodologies. My holistic approach combines
-              technical expertise with creative problem-solving, allowing me to
-              develop solutions that are both innovative and practical. I'm
-              driven by continuous learning and a commitment to excellence,
-              whether working independently or collaborating with diverse teams
-              to create impactful, scalable solutions.
+              🔬 Computer Vision and AI researcher with expertise in cutting-edge technologies like 
+              Neural Radiance Fields (NeRF) and 3D Gaussian Splatting. Currently pursuing a Master's 
+              in Computer Science at National Tsing Hua University with published research in top-tier 
+              conferences (AAAI 2025, BMVC 2023). Experienced in developing practical AI solutions for 
+              edge devices at MediaTek and computer vision algorithms for OCR and QR code systems. 
+              Passionate about advancing the field through both theoretical research and practical applications.
             </p>
           </div>
         </MotionWrapper>

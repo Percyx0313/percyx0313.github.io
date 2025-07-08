@@ -1,168 +1,181 @@
 export const personalInfo = {
-  name: "Rishikesh S",
-  location: "Coimbatore, India",
-  email: "rkesh2003@gmail.com",
-  github: "https://github.com/rishikesh2003",
-  linkedin: "https://www.linkedin.com/in/rishikeshs/",
+  name: "KENG-WEI CHANG",
+  location: "Hsinchu, Taiwan",
+  email: "percyx987654321@gmail.com",
+  phone: "+886-984-258519",
+  github: "", // Add if available
+  linkedin: "", // Add if available
 };
 
 export const workExperience = [
   {
-    company: "Chatbyte GmbH",
-    location: "Remote",
-    position: "Software Engineer",
-    period: "Mar 2024 - Present",
+    company: "Mediatek Inc.",
+    location: "Hsinchu, Taiwan",
+    position: "AI Algorithm Developer, AI algorithm develop Group(CAI2)",
+    period: "09/2024 – Present",
     achievements: [
-      "Designed and implemented business logic for AWS Lambdas using the Serverless Framework, forming the backbone of the application's functionality and ensuring seamless backend operations.",
-      "Built a comprehensive admin panel for managing content, user data, and analytics.",
-      "Contributed to the development and integration of a scalable CMS for managing blog content and other platform data.",
-      "Reduced database costs by introducing materialized views, optimizing query performance and resource usage.",
-      "Drove the integration of a custom affiliate marketing system, enabling seamless tracking and reporting of referrals and user activities.",
-      "Integrated Text-to-Speech (TTS) services for enhanced user experiences, optimizing both frontend and backend systems.",
-      "Collaborated with cross-functional teams to deliver high-quality features, actively reviewing pull requests to ensure code quality, adherence to standards, and efficient implementation.",
+      "Deployed and optimized AI algorithms for edge devices",
+      "Integrated AI algorithms into end-to-end systems",
     ],
   },
   {
-    company: "DevCrew",
-    location: "Coimbatore, India",
-    position: "Software Engineer",
-    period: "Mar 2023 - Mar 2024",
+    company: "Mediatek Inc.",
+    location: "Hsinchu, Taiwan",
+    position: "Software Engineering Intern, AI algorithm develop Group(CAI2)",
+    period: "07/2023 – 09/2023",
     achievements: [
-      "Developed responsive frontend components using React.js, enhancing user experience and app performance.",
-      "Optimized JavaScript solutions to improve load times and data-fetching efficiency.",
+      "Research running NeRF (Neural radiance field) on MediaTek's smartphones",
     ],
   },
   {
-    company: "Phoenitags",
-    location: "Coimbatore, India",
-    position: "Software Engineering Intern",
-    period: "Jan 2023 - Mar 2023",
+    company: "Champtek, Inc.",
+    location: "Hsinchu, Taiwan",
+    position: "Software Engineering Intern, Computer Vision Algorithm Development Group",
+    period: "07/2022 – 09/2022",
     achievements: [
-      "Built interactive UIs with React.js, focusing on reusable components and performance optimization.",
-      "Implemented JavaScript-based features like user authentication and real-time updates.",
+      "Developed a OCR software on machine-readable passport (MRP) that conforms to the ICAO 9303 standard using C++",
+    ],
+  },
+  {
+    company: "Champtek, Inc.",
+    location: "Hsinchu, Taiwan",
+    position: "Software Engineering Intern, Computer Vision Algorithm Development Group",
+    period: "07/2020 – 09/2020",
+    achievements: [
+      "Developed a QR code scanning software that conforms to the ISO/IEC 18004 standard using C++",
     ],
   },
 ];
 
 export const education = [
   {
-    institution: "Sri Krishna College of Engineering and Technology",
-    location: "Coimbatore, India",
-    degree: "B Tech Information Technology",
-    period: "Jun 2021 - Jun 2025",
+    institution: "National Tsing Hua University",
+    location: "Hsinchu, Taiwan",
+    degree: "Master's, Computer Science",
+    period: "09/2022 – Present",
     achievements: [
-      "President of the Department of Information Technology",
-      "G20 student delegate",
-      "Organized multiple technical workshops and events",
-      "Represented my college in multiple national and international hackathons and won.",
+      "Related Courses: Computer Vision (rank: 1/56, T: 57.26), Computer Graphics (rank: 1/147, T: 52.11)",
+    ],
+  },
+  {
+    institution: "National Tsing Hua University",
+    location: "Hsinchu, Taiwan",
+    degree: "Bachelor's, Mathematics",
+    period: "09/2018 – 06/2022",
+    achievements: [
+      "Honored with the Academic Excellence Award during senior year of college",
+      "Related Courses: Numerical Analysis (rank: 1/55, T: 68.77), Python (rank: 1/159, T: 59.22)",
     ],
   },
 ];
+
+export const researchExperience = [
+  {
+    institution: "Computer Vision Lab, National Tsing Hua University",
+    location: "Hsinchu, Taiwan",
+    position: "First Author",
+    advisor: "Prof. Shang-Hong Lai",
+    period: "06/2024 – 08/2024",
+    topic: "KeyGS: A Keyframe-Centric Gaussian Splatting Method For Monocular Image Sequences",
+    achievements: [
+      "Developed a stable and efficient coarse-to-fine frequency-aware densification technique with theoretical analysis for 3DGS, enabling joint refinement of camera poses and 3D reconstruction",
+      "Enhanced the average PSNR 3 dB on both the TNT and CO3Dv2 datasets compared to state-of-the-art methods",
+      "Accepted by AAAI 2025",
+    ],
+  },
+  {
+    institution: "Computer Vision Lab, National Tsing Hua University",
+    location: "Hsinchu, Taiwan",
+    position: "Second Author",
+    advisor: "Prof. Shang-Hong Lai",
+    period: "12/2022 – 06/2023",
+    topic: "Fairness-aware Kinship Verification",
+    achievements: [
+      "Proposed a novel loss function that can be aware of the fairness of different classes in data",
+      "Developed a cross-attention module that enhances the model's performance by focusing on facial features",
+      "Achieved 7% accuracy improvement compared to the SOTA method in the RFIW dataset",
+      "Improved the standard deviation from 2.43 to 0.27 compared to the SOTA method in the RFIW dataset",
+      "Accepted by BMVC 2023",
+    ],
+  },
+];
+
+export const teachingExperience = [
+  {
+    institution: "National Tsing Hua University",
+    position: "Teaching Assistant, Course: Introduction to Multimedia",
+    instructor: "Prof. Shang-Hong Lai",
+    period: "02/2024 – 06/2024",
+  },
+  {
+    institution: "National Tsing Hua University",
+    position: "Teaching Assistant, Course: Computer Vision",
+    instructor: "Prof. Shang-Hong Lai",
+    period: "02/2023 – 06/2023",
+  },
+  {
+    institution: "National Tsing Hua University",
+    position: "Teaching Assistant, Course: Python",
+    instructor: "Prof. Pai-Hsiang Chou",
+    period: "02/2022 – 06/2023",
+  },
+  {
+    institution: "National Tsing Hua University",
+    position: "Teaching Assistant, Course: Calculus",
+    instructor: "Prof. Jiun-Cheng Chen",
+    period: "02/2022 – 06/2022",
+  },
+];
+
 export const skills = {
   programmingLanguages: [
-    "TypeScript",
-    "JavaScript",
     "Python",
-    "C++",
-    "Java",
-    "Solidity",
+    "C/C++",
+    "Matlab",
+    "R",
+    "CUDA",
   ],
-  frontendDevelopment: [
-    "Nextjs",
-    "Reactjs",
-    "React Native",
-    "Shadcn UI",
-    "Tailwind CSS",
-    "HTML",
-    "CSS",
+  technologies: [
+    "Unix/Linux",
+    "Anaconda",
+    "Git",
+    "Latex",
+    "Docker",
   ],
-  backendDevelopment: ["Nodejs", "Expressjs"],
-  databaseAndStorage: ["PostgreSQL", "Drizzle (ORM)"],
-  cloudAndDevOps: ["AWS"],
-  toolsAndServices: [
-    "Clerk (Auth)",
-    "Sanity (CMS)",
-    "Tinybird (analytics)",
-    "Zod",
-    "Sentry",
-    "Mixpanel",
-    "Trigger.dev",
+  specializations: [
+    "Computer Vision",
+    "Machine Learning",
+    "Neural Radiance Fields (NeRF)",
+    "3D Gaussian Splatting",
+    "OCR Systems",
+    "Image Processing",
   ],
 };
 
 export const projects = [
-  {
-    title: "Net Zero Carbon Emissions",
-    github: "https://github.com/rishikesh2003/Prodigi",
-    description: [
-      "WiFi-RTT: Developed indoor occupancy tracking for energy optimization.",
-      "IoT Solutions: Implemented smart monitoring for energy efficiency and food waste reduction.",
-      "Real-Time Tracking: Designed systems to monitor carbon emissions and optimize resources.",
-      "Data-Driven Insights: Analyzed user patterns for adaptive energy and food management.",
-      "Reward Integration: Built QR-based green points system to incentivize eco-friendly actions.",
-    ],
-  },
-  {
-    title: "Mental Aarog",
-    github: "https://github.com/rishikesh2003/mental-aarog",
-    description: [
-      "A holistic mental health app leveraging AI and blockchain for early detection and personalized solutions for depression.",
-      "Features include social media analysis (ML-based sentiment tracking), PHQ-9 assessments, smartwatch integration for sleep and activity data, guided meditation, and smart suggestions for food, travel, music, and movies.",
-      "Developed a rewards system using MAG crypto token on Ethereum, enabling user engagement through in-app incentives.",
-      "Secure storage implemented via web3.storage, IPFS, and FileCoin.",
-      "Built with React, Supabase, Node.js, Flask, and Solidity, showcasing seamless integration of health tech and blockchain.",
-    ],
-  },
+  // Add any specific projects if available
 ];
 
 export const awards = [
   {
-    name: "IEEE YESIST12 Hackathon",
-    issuer: "IEEE",
-    date: "Sep 2022",
-    type: "International",
-    position: "Second Place",
+    name: "Computer Vision Competition",
+    issuer: "Prof. Shang-Hong Lai and NOVATEK",
+    date: "N/A",
+    type: "Competition",
+    position: "2nd Place",
+    description: "Image stitching by Deep Learning. Developed an attention mechanism to make U-Net fuse images better than the SOTA method. Developed a data augmentation scheme to get more important features in images.",
   },
+];
+
+export const certificates = [
   {
-    name: "Prodigi Cognizant Hackathon",
-    issuer: "Cognizant",
-    date: "Feb 2023",
-    type: "National",
-    position: "Second Runner-up",
-  },
-  {
-    name: "Cisco Thingqbator Hackathon",
-    issuer: "Cisco",
-    date: "Jan 2023",
-    type: "National",
-    position: "First Runner-up",
-  },
-  {
-    name: "Innovators Day",
-    issuer: "Sri Manakula Vinayagar Engineering College, Pondicherry",
-    date: "Sep 2022",
-    type: "National",
-    position: "First Prize",
-  },
-  {
-    name: "KG Hackfest'22",
-    issuer: "KGiSL Institute of Technology, Coimbatore",
-    date: "Sep 2022",
-    type: "National",
-    position: "Second Prize",
-  },
-  {
-    name: "Innohacks'22",
-    issuer: "Innogeeks, KIET Group of Institutions, New Delhi",
-    date: "May 2022",
-    type: "National",
-    position: "Second Runner-up",
-  },
-  {
-    name: "Hack @ SKCET",
-    issuer: "Hackclub SKCET, SKCET, Coimbatore",
-    date: "Feb 2022",
-    type: "National",
-    position: "Most Impactful Hack",
+    name: "Computer Vision Competition",
+    issuer: "Prof. Shang-Hong Lai and NOVATEK",
+    topic: "Image stitching by Deep Learning",
+    rank: "2nd",
+    achievements: [
+      "Developed an attention mechanism to make U-Net fuse images better than the SOTA method",
+      "Developed a data augmentation scheme to get more important features in images",
+    ],
   },
 ];
