@@ -1,10 +1,10 @@
 export const personalInfo = {
   name: "KENG-WEI CHANG",
   location: "Hsinchu, Taiwan",
-  email: "percyx987654321@gmail.com",
+  email: "percyx987654321@gapp.nthu.edu.tw",
   phone: "+886-984-258519",
-  github: "", // Add if available
-  linkedin: "", // Add if available
+  github: "https://github.com/Percyx0313",
+  linkedin: "https://www.linkedin.com/in/%E8%80%95%E7%B6%AD-%E5%BC%B5-841063260/", 
 };
 
 export const workExperience = [
@@ -12,7 +12,7 @@ export const workExperience = [
     company: "Mediatek Inc.",
     location: "Hsinchu, Taiwan",
     position: "AI Algorithm Developer, AI algorithm develop Group(CAI2)",
-    period: "09/2024 – Present",
+    period: "09/2024 - Present",
     achievements: [
       "Deployed and optimized AI algorithms for edge devices",
       "Integrated AI algorithms into end-to-end systems",
@@ -22,7 +22,7 @@ export const workExperience = [
     company: "Mediatek Inc.",
     location: "Hsinchu, Taiwan",
     position: "Software Engineering Intern, AI algorithm develop Group(CAI2)",
-    period: "07/2023 – 09/2023",
+    period: "07/2023 - 09/2023",
     achievements: [
       "Research running NeRF (Neural radiance field) on MediaTek's smartphones",
     ],
@@ -31,7 +31,7 @@ export const workExperience = [
     company: "Champtek, Inc.",
     location: "Hsinchu, Taiwan",
     position: "Software Engineering Intern, Computer Vision Algorithm Development Group",
-    period: "07/2022 – 09/2022",
+    period: "07/2022 - 09/2022",
     achievements: [
       "Developed a OCR software on machine-readable passport (MRP) that conforms to the ICAO 9303 standard using C++",
     ],
@@ -40,7 +40,7 @@ export const workExperience = [
     company: "Champtek, Inc.",
     location: "Hsinchu, Taiwan",
     position: "Software Engineering Intern, Computer Vision Algorithm Development Group",
-    period: "07/2020 – 09/2020",
+    period: "07/2020 - 09/2020",
     achievements: [
       "Developed a QR code scanning software that conforms to the ISO/IEC 18004 standard using C++",
     ],
@@ -52,7 +52,7 @@ export const education = [
     institution: "National Tsing Hua University",
     location: "Hsinchu, Taiwan",
     degree: "Master's, Computer Science",
-    period: "09/2022 – Present",
+    period: "09/2022 - Present",
     achievements: [
       "Related Courses: Computer Vision (rank: 1/56, T: 57.26), Computer Graphics (rank: 1/147, T: 52.11)",
     ],
@@ -61,7 +61,7 @@ export const education = [
     institution: "National Tsing Hua University",
     location: "Hsinchu, Taiwan",
     degree: "Bachelor's, Mathematics",
-    period: "09/2018 – 06/2022",
+    period: "09/2018 - 06/2022",
     achievements: [
       "Honored with the Academic Excellence Award during senior year of college",
       "Related Courses: Numerical Analysis (rank: 1/55, T: 68.77), Python (rank: 1/159, T: 59.22)",
@@ -75,7 +75,7 @@ export const researchExperience = [
     location: "Hsinchu, Taiwan",
     position: "First Author",
     advisor: "Prof. Shang-Hong Lai",
-    period: "06/2024 – 08/2024",
+    period: "06/2024 - 08/2024",
     topic: "KeyGS: A Keyframe-Centric Gaussian Splatting Method For Monocular Image Sequences",
     achievements: [
       "Developed a stable and efficient coarse-to-fine frequency-aware densification technique with theoretical analysis for 3DGS, enabling joint refinement of camera poses and 3D reconstruction",
@@ -88,7 +88,7 @@ export const researchExperience = [
     location: "Hsinchu, Taiwan",
     position: "Second Author",
     advisor: "Prof. Shang-Hong Lai",
-    period: "12/2022 – 06/2023",
+    period: "12/2022 - 06/2023",
     topic: "Fairness-aware Kinship Verification",
     achievements: [
       "Proposed a novel loss function that can be aware of the fairness of different classes in data",
@@ -105,25 +105,25 @@ export const teachingExperience = [
     institution: "National Tsing Hua University",
     position: "Teaching Assistant, Course: Introduction to Multimedia",
     instructor: "Prof. Shang-Hong Lai",
-    period: "02/2024 – 06/2024",
+    period: "02/2024 - 06/2024",
   },
   {
     institution: "National Tsing Hua University",
     position: "Teaching Assistant, Course: Computer Vision",
     instructor: "Prof. Shang-Hong Lai",
-    period: "02/2023 – 06/2023",
+    period: "02/2023 - 06/2023",
   },
   {
     institution: "National Tsing Hua University",
     position: "Teaching Assistant, Course: Python",
     instructor: "Prof. Pai-Hsiang Chou",
-    period: "02/2022 – 06/2023",
+    period: "02/2022 - 06/2023",
   },
   {
     institution: "National Tsing Hua University",
     position: "Teaching Assistant, Course: Calculus",
     instructor: "Prof. Jiun-Cheng Chen",
-    period: "02/2022 – 06/2022",
+    period: "02/2022 - 06/2022",
   },
 ];
 
