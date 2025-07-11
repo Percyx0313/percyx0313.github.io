@@ -1,0 +1,44 @@
+name: Deploy to GitHub Pages
+
+on:
+  # 當推送到 main 分支時觸發
+  push:
+    branches: [ main ]
+  # 允許手動觸發
+  workflow_dispatch:
+
+# 設定 GITHUB_TOKEN 權限以允許部署到 GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 只允許一個部署作業同時運行，跳過正在進行中的運行之間排隊的運行
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+        
+      - name: Install, build, and upload your site
+        uses: withastro/action@v2
+        with:
+          path: . # 專案根目錄的位置（可選）
+          node-version: 20 # 使用的 Node.js 版本（可選，預設 20）
+          package-manager: npm@latest # 使用的套件管理器和版本（可選）
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 
