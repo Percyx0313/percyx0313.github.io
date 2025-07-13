@@ -1,0 +1,115 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import GlassHeader from "@/components/GlassHeader";
+import ProjectsSection from "@/components/ProjectsSection";
+import Footer from "@/components/Footer";
+---
+
+<Layout title="Projects | MAiTH LAB" description="Explore innovative projects from MAiTH LAB - cutting-edge research in computer vision, AI algorithms, and mathematical applications. Discover our contributions to academia and industry.">
+  <GlassHeader client:only="react" />
+  <main class="min-h-screen">
+    {/* Projects Header */}
+    <section class="py-16 bg-gradient-to-b from-background to-background/50">
+      <div class="container max-w-4xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+            🚀 Our Projects
+          </h1>
+          <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Discover the innovative projects that drive MAiTH LAB's mission forward. 
+            From cutting-edge research to practical applications, each project represents our commitment 
+            to advancing mathematics and AI education.
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+          <div class="text-center p-6 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg border border-blue-500/20">
+            <div class="text-3xl mb-3">🔬</div>
+            <h3 class="text-lg font-semibold mb-2">Research Projects</h3>
+            <p class="text-sm text-muted-foreground">
+              Cutting-edge research in computer vision, neural rendering, and AI fairness
+            </p>
+          </div>
+          
+          <div class="text-center p-6 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-lg border border-green-500/20">
+            <div class="text-3xl mb-3">💼</div>
+            <h3 class="text-lg font-semibold mb-2">Industry Projects</h3>
+            <p class="text-sm text-muted-foreground">
+              Real-world applications in OCR systems, mobile AI, and computer vision
+            </p>
+          </div>
+          
+          <div class="text-center p-6 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20">
+            <div class="text-3xl mb-3">🏆</div>
+            <h3 class="text-lg font-semibold mb-2">Competition Projects</h3>
+            <p class="text-sm text-muted-foreground">
+              Award-winning solutions in computer vision competitions and challenges
+            </p>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm backdrop-filter p-6 rounded-lg border border-purple-500/20 dark:border-purple-500/10 shadow-sm">
+          <h3 class="text-xl font-semibold mb-3 text-center">🎯 Our Impact</h3>
+          <div class="grid md:grid-cols-2 gap-6 text-sm">
+            <div>
+              <h4 class="font-medium mb-2">📊 Research Contributions</h4>
+              <ul class="text-muted-foreground space-y-1">
+                <li>• Published in top-tier conferences (AAAI, BMVC)</li>
+                <li>• Novel algorithms for 3D reconstruction</li>
+                <li>• Fairness-aware AI systems</li>
+                <li>• Mobile-optimized neural rendering</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 class="font-medium mb-2">🛠️ Practical Applications</h4>
+              <ul class="text-muted-foreground space-y-1">
+                <li>• OCR systems for document processing</li>
+                <li>• QR code scanning algorithms</li>
+                <li>• Edge AI deployment solutions</li>
+                <li>• Computer vision pipelines</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    {/* Projects Content */}
+    <section class="py-8">
+      <div class="container max-w-4xl mx-auto px-4">
+        <ProjectsSection client:only="react" />
+      </div>
+    </section>
+    
+    {/* Call to Action */}
+    <section class="py-16 bg-gradient-to-b from-background/50 to-background">
+      <div class="container max-w-4xl mx-auto px-4">
+        <div class="text-center">
+          <div class="backdrop-blur-xl bg-white/5 dark:bg-white/5 border border-white/10 dark:border-white/10 rounded-2xl p-8 max-w-2xl mx-auto">
+            <h3 class="text-2xl font-bold mb-4">Interested in Collaboration?</h3>
+            <p class="text-muted-foreground mb-6">
+              We're always open to exciting collaborations and research opportunities. 
+              Let's work together to push the boundaries of AI and mathematics education.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a 
+                href="/resume" 
+                class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                📋 View Resume
+              </a>
+              <a 
+                href="/articles" 
+                class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                📚 Read Articles
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer client:only="react" />
+</Layout> 

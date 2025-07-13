@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import GlassHeader from '../components/GlassHeader';
+import Footer from '../components/Footer';
 import ArticleCard from '../components/ArticleCard';
 import { articles, getFeaturedArticles } from '../lib/articles';
 
@@ -7,8 +9,9 @@ const featuredArticles = getFeaturedArticles();
 const allTags = [...new Set(articles.flatMap(article => article.tags))];
 ---
 
-<Layout title="文章總覽 | AI & 機器學習探索之旅">
-  <main class="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900/20 to-purple-900/20">
+<Layout title="Articles | MAiTH LAB" description="Explore AI and machine learning articles from MAiTH LAB. Discover cutting-edge research, tutorials, and insights in computer vision, neural networks, and mathematical sciences.">
+  <GlassHeader client:only="react" />
+  <main class="min-h-screen bg-gradient-to-b from-background to-background/50">
     <!-- 背景裝飾 -->
     <div class="fixed inset-0 overflow-hidden pointer-events-none">
       <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
@@ -19,39 +22,39 @@ const allTags = [...new Set(articles.flatMap(article => article.tags))];
     <div class="relative container mx-auto px-4 py-16">
       <!-- 頁面標題區域 -->
       <div class="text-center mb-16">
-        <div class="inline-flex items-center gap-3 backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl px-8 py-4 mb-8">
+        <div class="inline-flex items-center gap-3 backdrop-blur-xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl px-8 py-4 mb-8">
           <span class="text-4xl">📚</span>
           <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            文章總覽
+            MAiTH LAB Articles
           </h1>
         </div>
         
-        <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+        <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
           探索 AI 與機器學習的奇妙世界 🚀<br>
           從基礎概念到前沿技術，與我一起踏上學習之旅
         </p>
 
         <!-- 統計數據 -->
         <div class="flex flex-wrap justify-center gap-6 mt-8">
-          <div class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl px-6 py-3">
+          <div class="backdrop-blur-xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-xl px-6 py-3">
             <div class="text-2xl font-bold text-blue-400">{articles.length}</div>
-            <div class="text-sm text-gray-400">總文章數</div>
+            <div class="text-sm text-muted-foreground">總文章數</div>
           </div>
-          <div class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl px-6 py-3">
+          <div class="backdrop-blur-xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl px-6 py-3">
             <div class="text-2xl font-bold text-purple-400">{featuredArticles.length}</div>
-            <div class="text-sm text-gray-400">精選文章</div>
+            <div class="text-sm text-muted-foreground">精選文章</div>
           </div>
-          <div class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl px-6 py-3">
+          <div class="backdrop-blur-xl bg-gradient-to-r from-pink-500/10 to-orange-500/10 border border-pink-500/20 rounded-xl px-6 py-3">
             <div class="text-2xl font-bold text-pink-400">{allTags.length}</div>
-            <div class="text-sm text-gray-400">技術標籤</div>
+            <div class="text-sm text-muted-foreground">技術標籤</div>
           </div>
         </div>
       </div>
 
       <!-- 篩選控制 -->
       <div class="mb-12">
-        <div class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6">
-          <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+        <div class="backdrop-blur-xl bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-2xl p-6">
+          <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
             🏷️ 技術標籤
           </h3>
           <div class="flex flex-wrap gap-3">
@@ -63,7 +66,7 @@ const allTags = [...new Set(articles.flatMap(article => article.tags))];
             </button>
             {allTags.map((tag) => (
               <button 
-                class="filter-btn px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 bg-white/10 text-gray-300 hover:bg-white/20"
+                class="filter-btn px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 bg-gradient-to-r from-gray-500/20 to-gray-600/20 border border-gray-500/30 text-muted-foreground hover:from-blue-500/20 hover:to-purple-500/20 hover:border-blue-500/30"
                 data-filter={tag}
               >
                 {tag}
@@ -76,7 +79,7 @@ const allTags = [...new Set(articles.flatMap(article => article.tags))];
       <!-- 精選文章區域 -->
       {featuredArticles.length > 0 && (
         <section class="mb-16">
-          <h2 class="text-3xl font-bold text-white mb-8 flex items-center gap-3">
+          <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
             ⭐ 精選文章
             <div class="h-px bg-gradient-to-r from-yellow-400 to-orange-500 flex-grow"></div>
           </h2>
@@ -90,7 +93,7 @@ const allTags = [...new Set(articles.flatMap(article => article.tags))];
 
       <!-- 所有文章區域 -->
       <section>
-        <h2 class="text-3xl font-bold text-white mb-8 flex items-center gap-3">
+        <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
           📖 所有文章
           <div class="h-px bg-gradient-to-r from-blue-400 to-purple-400 flex-grow"></div>
         </h2>
@@ -107,28 +110,29 @@ const allTags = [...new Set(articles.flatMap(article => article.tags))];
         <!-- 無結果提示 -->
         <div id="no-results" class="hidden text-center py-16">
           <div class="text-6xl mb-4">🔍</div>
-          <h3 class="text-2xl font-bold text-white mb-2">找不到相關文章</h3>
-          <p class="text-gray-400">試試選擇其他標籤或查看全部文章</p>
+          <h3 class="text-2xl font-bold mb-2">找不到相關文章</h3>
+          <p class="text-muted-foreground">試試選擇其他標籤或查看全部文章</p>
         </div>
       </section>
 
       <!-- 底部 CTA -->
       <div class="text-center mt-20">
-        <div class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 max-w-2xl mx-auto">
-          <h3 class="text-2xl font-bold text-white mb-4">想要了解更多？</h3>
-          <p class="text-gray-300 mb-6">
+        <div class="backdrop-blur-xl bg-gradient-to-r from-teal-500/10 to-cyan-500/10 border border-teal-500/20 rounded-2xl p-8 max-w-2xl mx-auto">
+          <h3 class="text-2xl font-bold mb-4">想要了解更多？</h3>
+          <p class="text-muted-foreground mb-6">
             定期更新最新的 AI 與機器學習內容，歡迎關注我的學習旅程！
           </p>
           <a 
-            href="/#contact" 
+            href="/resume" 
             class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
           >
-            📬 聯絡我
+            📋 查看履歷
           </a>
         </div>
       </div>
     </div>
   </main>
+  <Footer client:only="react" />
 </Layout>
 
 <script>
@@ -141,10 +145,12 @@ const allTags = [...new Set(articles.flatMap(article => article.tags))];
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         // 更新按鈕狀態
-        filterBtns.forEach(b => b.classList.remove('active', 'bg-gradient-to-r', 'from-blue-500', 'to-purple-600', 'text-white'));
-        filterBtns.forEach(b => b.classList.add('bg-white/10', 'text-gray-300'));
+        filterBtns.forEach(b => {
+          b.classList.remove('active', 'bg-gradient-to-r', 'from-blue-500', 'to-purple-600', 'text-white');
+          b.classList.add('bg-gradient-to-r', 'from-gray-500/20', 'to-gray-600/20', 'border', 'border-gray-500/30', 'text-muted-foreground');
+        });
         
-        btn.classList.remove('bg-white/10', 'text-gray-300');
+        btn.classList.remove('bg-gradient-to-r', 'from-gray-500/20', 'to-gray-600/20', 'border-gray-500/30', 'text-muted-foreground');
         btn.classList.add('active', 'bg-gradient-to-r', 'from-blue-500', 'to-purple-600', 'text-white');
 
         const filter = (btn as HTMLElement).dataset.filter;

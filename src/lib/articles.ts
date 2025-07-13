@@ -12,15 +12,15 @@ export interface Article {
 
 export const articles: Article[] = [
   {
-    id: "kl-divergence-explained",
-    title: "從一枚硬幣，理解什麼是「散度 (Divergence)」",
-    description: "一篇關於 KL 散度的入門文章，從隨機變數和機率分佈的基礎概念開始，解釋如何量化兩個分佈之間的差異。包含互動視覺化和實戰演練。",
+    id: "maith-spiral-distribution",
+    title: "MAiTH LAB 螺旋：從幾何到機率分布的奇妙旅程",
+    description: "探索如何將數學函數轉換為機率分布，以MAiTH LAB logo的螺旋曲線為例，深入理解distribution variable和distribution fitting的核心概念。",
     slug: "test",
     date: "2024-01-15",
-    readTime: "8 分鐘",
-    tags: ["機器學習", "數學", "機率論", "KL散度"],
+    readTime: "12 分鐘",
+    tags: ["機器學習", "數學", "機率論", "Distribution Fitting", "MAiTH LAB"],
     featured: true,
-    coverImage: "/coin_distributions.png"
+    coverImage: "/images/logos/logo-light.svg"
   },
   {
     id: "coming-soon-1",
@@ -78,19 +78,20 @@ export function getTagColors(tag: string): string {
     "深度學習": "bg-purple-500/20 text-purple-300 border-purple-500/30", 
     "數學": "bg-green-500/20 text-green-300 border-green-500/30",
     "機率論": "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
-    "KL散度": "bg-orange-500/20 text-orange-300 border-orange-500/30",
-    "Transformer": "bg-pink-500/20 text-pink-300 border-pink-500/30",
-    "注意力機制": "bg-indigo-500/20 text-indigo-300 border-indigo-500/30",
-    "NLP": "bg-cyan-500/20 text-cyan-300 border-cyan-500/30",
+    "Distribution Fitting": "bg-orange-500/20 text-orange-300 border-orange-500/30",
+    "MAiTH LAB": "bg-pink-500/20 text-pink-300 border-pink-500/30",
+    "Transformer": "bg-indigo-500/20 text-indigo-300 border-indigo-500/30",
+    "注意力機制": "bg-cyan-500/20 text-cyan-300 border-cyan-500/30",
+    "NLP": "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
     "CNN": "bg-red-500/20 text-red-300 border-red-500/30",
-    "電腦視覺": "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
-    "神經網路": "bg-violet-500/20 text-violet-300 border-violet-500/30",
-    "GANs": "bg-rose-500/20 text-rose-300 border-rose-500/30",
-    "生成模型": "bg-teal-500/20 text-teal-300 border-teal-500/30",
-    "強化學習": "bg-amber-500/20 text-amber-300 border-amber-500/30",
-    "Q-Learning": "bg-lime-500/20 text-lime-300 border-lime-500/30",
-    "遊戲AI": "bg-sky-500/20 text-sky-300 border-sky-500/30",
-    "策略優化": "bg-stone-500/20 text-stone-300 border-stone-500/30"
+    "電腦視覺": "bg-violet-500/20 text-violet-300 border-violet-500/30",
+    "神經網路": "bg-rose-500/20 text-rose-300 border-rose-500/30",
+    "GANs": "bg-teal-500/20 text-teal-300 border-teal-500/30",
+    "生成模型": "bg-amber-500/20 text-amber-300 border-amber-500/30",
+    "強化學習": "bg-lime-500/20 text-lime-300 border-lime-500/30",
+    "Q-Learning": "bg-sky-500/20 text-sky-300 border-sky-500/30",
+    "遊戲AI": "bg-stone-500/20 text-stone-300 border-stone-500/30",
+    "策略優化": "bg-slate-500/20 text-slate-300 border-slate-500/30"
   };
   
   return tagColorMap[tag] || "bg-gray-500/20 text-gray-300 border-gray-500/30";

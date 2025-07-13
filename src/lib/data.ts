@@ -153,7 +153,79 @@ export const skills = {
 };
 
 export const projects = [
-  // Add any specific projects if available
+  {
+    title: "KeyGS: A Keyframe-Centric Gaussian Splatting Method",
+    description: [
+      "Developed a stable and efficient coarse-to-fine frequency-aware densification technique for 3D Gaussian Splatting",
+      "Enabled joint refinement of camera poses and 3D reconstruction with theoretical analysis",
+      "Enhanced average PSNR by 3 dB on TNT and CO3Dv2 datasets compared to SOTA methods",
+      "Accepted by AAAI 2025 as first author"
+    ],
+    github: "https://github.com/Percyx0313", // Update with actual repo if available
+    tech: ["Python", "PyTorch", "3D Computer Vision", "Neural Rendering"],
+    type: "research"
+  },
+  {
+    title: "Fairness-aware Kinship Verification",
+    description: [
+      "Proposed a novel fairness-aware loss function for kinship verification across different demographic groups",
+      "Developed a cross-attention module to enhance model performance on facial features",
+      "Achieved 7% accuracy improvement compared to SOTA method on RFIW dataset",
+      "Improved fairness metrics with standard deviation from 2.43 to 0.27",
+      "Accepted by BMVC 2023 as second author"
+    ],
+    github: "https://github.com/Percyx0313", // Update with actual repo if available
+    tech: ["Python", "PyTorch", "Computer Vision", "Fairness AI"],
+    type: "research"
+  },
+  {
+    title: "Machine-Readable Passport OCR System",
+    description: [
+      "Developed OCR software for machine-readable passports conforming to ICAO 9303 standard",
+      "Implemented using C++ with high accuracy text recognition and data extraction",
+      "Industrial project completed during internship at Champtek Inc.",
+      "Handled complex passport layouts and international character sets"
+    ],
+    github: "https://github.com/Percyx0313", // Update with actual repo if available
+    tech: ["C++", "OCR", "Image Processing", "Computer Vision"],
+    type: "industry"
+  },
+  {
+    title: "QR Code Scanning Software",
+    description: [
+      "Built QR code scanning software conforming to ISO/IEC 18004 standard",
+      "Implemented in C++ with robust error correction and detection algorithms",
+      "Optimized for real-time performance and various lighting conditions",
+      "Completed during internship at Champtek Inc."
+    ],
+    github: "https://github.com/Percyx0313", // Update with actual repo if available
+    tech: ["C++", "Computer Vision", "Image Processing", "Algorithm Design"],
+    type: "industry"
+  },
+  {
+    title: "Image Stitching with Deep Learning",
+    description: [
+      "Developed attention mechanism for U-Net to improve image fusion quality",
+      "Created novel data augmentation scheme to extract important image features",
+      "Achieved 2nd place in Computer Vision Competition",
+      "Outperformed state-of-the-art methods in image stitching benchmarks"
+    ],
+    github: "https://github.com/Percyx0313", // Update with actual repo if available
+    tech: ["Python", "PyTorch", "Deep Learning", "Computer Vision"],
+    type: "competition"
+  },
+  {
+    title: "Neural Radiance Fields on Mobile Devices",
+    description: [
+      "Researched and optimized NeRF implementation for MediaTek smartphones",
+      "Developed efficient rendering pipeline for mobile GPU constraints",
+      "Achieved real-time performance on edge devices",
+      "Internship project at MediaTek Inc."
+    ],
+    github: "https://github.com/Percyx0313", // Update with actual repo if available
+    tech: ["Python", "CUDA", "Mobile Computing", "Neural Rendering"],
+    type: "research"
+  }
 ];
 
 export const awards = [

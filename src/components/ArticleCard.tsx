@@ -29,7 +29,7 @@ export default function ArticleCard({ article, index }: ArticleCardProps) {
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       
       {/* 主卡片 */}
-      <div className="relative backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-500 h-full flex flex-col">
+      <div className="relative backdrop-blur-xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-6 hover:from-blue-500/15 hover:to-purple-500/15 hover:border-blue-500/30 transition-all duration-500 h-full flex flex-col">
         
         {/* Featured 徽章 */}
         {article.featured && (
@@ -98,7 +98,7 @@ export default function ArticleCard({ article, index }: ArticleCardProps) {
             </motion.span>
           ))}
           {article.tags.length > 3 && (
-            <span className="px-2 py-1 rounded-full text-xs font-medium border bg-gray-500/20 text-gray-300 border-gray-500/30">
+            <span className="px-2 py-1 rounded-full text-xs font-medium border bg-gradient-to-r from-gray-500/20 to-gray-600/20 text-gray-300 border-gray-500/30">
               +{article.tags.length - 3}
             </span>
           )}
@@ -109,7 +109,7 @@ export default function ArticleCard({ article, index }: ArticleCardProps) {
           href={isComingSoon ? '#' : `/${article.slug}`}
           className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
             isComingSoon 
-              ? 'bg-gray-600/50 text-gray-400 cursor-not-allowed' 
+              ? 'bg-gradient-to-r from-gray-600/50 to-gray-700/50 text-gray-400 cursor-not-allowed border border-gray-600/30' 
               : 'bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white shadow-lg hover:shadow-xl'
           }`}
           whileHover={!isComingSoon ? { scale: 1.05 } : {}}

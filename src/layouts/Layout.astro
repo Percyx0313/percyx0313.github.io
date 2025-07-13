@@ -6,7 +6,7 @@ interface Props {
   description?: string;
 }
 
-const { title = "Keng-Wei's Blog", description = "My Blog" } =
+const { title = "MAiTH LAB | Mathematics & AI Teaching Laboratory", description = "MAiTH LAB is a brand dedicated to mathematics and artificial intelligence education, founded by Keng-Wei Chang. Explore cutting-edge research, educational content, and innovative projects in computer vision, machine learning, and mathematical sciences." } =
   Astro.props;
 ---
 
@@ -15,9 +15,18 @@ const { title = "Keng-Wei's Blog", description = "My Blog" } =
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/images/logos/icon-light.svg" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    <meta name="keywords" content="MAiTH LAB, Mathematics, AI, Machine Learning, Computer Vision, Education, Research, Neural Networks, Deep Learning, Teaching" />
+    <meta name="author" content="Keng-Wei Chang" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/logos/logo-light.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

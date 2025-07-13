@@ -1,0 +1,107 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import GlassHeader from "@/components/GlassHeader";
+import ExperienceSection from "@/components/ExperienceSection";
+import ResearchExperienceSection from "@/components/ResearchExperienceSection";
+import TeachingExperienceSection from "@/components/TeachingExperienceSection";
+import SkillsSection from "@/components/SkillsSection";
+import AwardsSection from "@/components/AwardsSection";
+import EducationSection from "@/components/EducationSection";
+import Footer from "@/components/Footer";
+import { personalInfo } from "@/lib/data";
+import { motion } from "framer-motion";
+---
+
+<Layout title="Resume | MAiTH LAB" description="Comprehensive resume of Keng-Wei Chang, founder of MAiTH LAB. Explore his professional experience, research achievements, and educational background in AI and mathematics.">
+  <GlassHeader client:only="react" />
+  <main class="min-h-screen">
+    {/* Resume Header */}
+    <section class="py-16 bg-gradient-to-b from-background to-background/50">
+      <div class="container max-w-4xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row md:items-center justify-between mb-12">
+          <div class="text-center md:text-left mb-8 md:mb-0">
+            <h1 class="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+              📋 Resume
+            </h1>
+            <h2 class="text-2xl font-semibold text-muted-foreground mb-2">
+              {personalInfo.name}
+            </h2>
+            <p class="text-lg text-muted-foreground mb-6">
+              Founder of MAiTH LAB | AI Researcher & Educator
+            </p>
+            
+            <div class="flex flex-col gap-2 items-center md:items-start">
+              <div class="flex items-center text-sm text-muted-foreground">
+                <span class="mr-2">📍</span>
+                {personalInfo.location}
+              </div>
+              <div class="flex items-center text-sm">
+                <span class="mr-2">✉️</span>
+                <a href={`mailto:${personalInfo.email}`} class="text-muted-foreground hover:text-purple-500 transition-colors">
+                  {personalInfo.email}
+                </a>
+              </div>
+              {personalInfo.github && (
+                <div class="flex items-center text-sm">
+                  <span class="mr-2">🌟</span>
+                  <a href={personalInfo.github} target="_blank" class="text-muted-foreground hover:text-purple-500 transition-colors">
+                    GitHub
+                  </a>
+                </div>
+              )}
+              {personalInfo.linkedin && (
+                <div class="flex items-center text-sm">
+                  <span class="mr-2">🔗</span>
+                  <a href={personalInfo.linkedin} target="_blank" class="text-muted-foreground hover:text-purple-500 transition-colors">
+                    LinkedIn
+                  </a>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Personal Photo */}
+          <div class="flex justify-center">
+            <div class="relative">
+              <div class="absolute -inset-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full blur opacity-30 hover:opacity-100 transition duration-1000"></div>
+              <img
+                src="/profile.jpg"
+                alt="Keng-Wei Chang"
+                class="w-48 md:w-60 rounded-full relative ring-2 ring-purple-500/50"
+                style="object-fit: cover;"
+              />
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm backdrop-filter p-6 rounded-lg border border-purple-500/20 dark:border-purple-500/10 shadow-sm">
+          <h3 class="text-xl font-semibold mb-3">🎯 Professional Summary</h3>
+          <p class="text-muted-foreground leading-relaxed">
+            Computer Vision and AI researcher with expertise in cutting-edge technologies including 
+            Neural Radiance Fields (NeRF) and 3D Gaussian Splatting. Currently pursuing a Master's 
+            in Computer Science at National Tsing Hua University with published research in top-tier 
+            conferences (AAAI 2025, BMVC 2023). Experienced in developing practical AI solutions for 
+            edge devices at MediaTek and computer vision algorithms for industrial applications. 
+            Founder of MAiTH LAB, dedicated to advancing mathematics and AI education through 
+            research, innovation, and practical applications.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    {/* Resume Content */}
+    <section class="py-8">
+      <div class="container max-w-4xl mx-auto px-4">
+        <div class="space-y-16">
+          <ExperienceSection client:only="react" />
+          <ResearchExperienceSection client:only="react" />
+          <EducationSection client:only="react" />
+          <TeachingExperienceSection client:only="react" />
+          <SkillsSection client:only="react" />
+          <AwardsSection client:only="react" />
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer client:only="react" />
+</Layout> 
